@@ -136,4 +136,5 @@ export default {
 
 ## VUE的基本语法
 在上节我们讲到，vue默认挂载Hello组件。所以我们可以在Hello做相应的例子学习！
+### 绑定数据
 
