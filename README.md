@@ -89,4 +89,25 @@ export default new Router({
   ]
 })
 ```
+* 最后我们打开Hello.vue,并将其改为以下代码。`<template></template>`里面的内容就是我们的组件内容，也是真正渲染到页面的内容。
+```javascript
+<template>
+  <div>
+    <h2>Hello Vue</h2>
+  </div>
+</template>
+<script>
+export default {
+  data () {
+    return {
+    }
+  }
+}
+</script>
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+</style>
+```
+* 现在我们打开浏览器去看看效果，你会发现页面只单单剩下`Hello Vue`了。
 
+修改完vue-cli自带的不必要代码后，相信您已经有一个大概的思路了吧？如果您还是感到困惑也不要紧，相信学习完接下来的章节，您会对整个项目的逻辑变得更加清晰。
