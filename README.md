@@ -214,4 +214,6 @@ export default {
 * data函数中我们定义了on变量参数
 * p标签中添加了`v-bind:class="{'Textcolor': on}"` 我们可以通过v-bind：class绑定Textcolor样式类。也可以写成 `:class="{'Textcolor': on}"`
 * 双大括号{class，show}，第一个参数是我们的样式类，第二个参数为Boolean类型，当show等于true时添加class类。
-* input双向数据绑定。v-model="on" 绑定了on参数，当input选中时，on的值为true，则添加Textcolor类。
+* input双向数据绑定。v-model="on" 绑定了on参数，当input选中时，on的值为true，则添加Textcolor类。同时取消选中时，on的值为false，又会取消Textcolor类。
+
+
