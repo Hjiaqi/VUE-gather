@@ -249,3 +249,5 @@ vue支持javascript表达式
 * {{ ok ? 'YES' : 'NO' }}  //三元表达式
 * {{ message.split('').reverse().join('') }} //使用函数
 * v-bind:id="'list-' + id"  //绑定id
+
+> 条件
