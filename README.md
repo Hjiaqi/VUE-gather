@@ -163,4 +163,29 @@ export default {
 * export default是ES6的语法，均可用于导出常量、函数、文件、模块等。因为我们Hello组件需要动态匹配到路由中，在app`<router-view></router-view>`中显示。所以需要export default进行导出。
 * data 作为一个函数通过return返回数据，我们可以在data中定义数据。这里我们定义了message值，再通过{{message}}绑定在组件中。
 
+> HTML
+#### 代码：
+```javascript
+<template>
+  <div>
+    <div v-html="message"></div>
+  </div>
+</template>
+<script>
+export default {
+  data () {
+    return {
+      message: '<h1>VUE 从入门到项目实战</h1>'
+    }
+  }
+}
+</script>
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+</style>
+```
+#### 讲解：
+
+
+
 
