@@ -216,4 +216,36 @@ export default {
 * 双大括号{class，show}，第一个参数是我们的样式类，第二个参数为Boolean类型，当show等于true时添加class类。
 * input双向数据绑定。v-model="on" 绑定了on参数，当input选中时，on的值为true，则添加Textcolor类。同时取消选中时，on的值为false，又会取消Textcolor类。
 
+> 表达式
 
+#### 代码：
+```javascript
+<template>
+  <div>
+    {{5+5}}<br>
+    {{ ok ? 'YES' : 'NO' }}<br>
+    {{ message.split('').reverse().join('') }}
+    <div v-bind:id="'list-' + id">VUE 从快速入门到项目实战</div>
+  </div>
+</template>
+<script>
+export default {
+  data () {
+    return {
+      ok: true,
+      message: 'VUE',
+      id : 1
+    }
+  }
+}
+</script>
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+</style>
+```
+#### 讲解：
+vue支持javascript表达式
+* {{5+5}}  //10
+* {{ ok ? 'YES' : 'NO' }}  //三元表达式
+* {{ message.split('').reverse().join('') }} //使用函数
+* v-bind:id="'list-' + id"  //绑定id
