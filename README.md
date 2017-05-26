@@ -128,13 +128,38 @@ export default {
 </style>
 ```
 #### 讲解：
-* `<template></template>`是我们组件的内容，也是HTML放置区域。
+* `<template></template>`是我们组件的内容，也是HTML放置区域（注意`<template></template>`中只允许一个根节点，否则会报错）。
 * `<script type="text/ecmascript-6"></script>`相信大家都不陌生，就是js区域。type="text/ecmascript-6"声明支持ES6语法。
 * `<style scoped></style>`是我们组件的样式区域。
 * vue中最大的设计特点就是HTML/CSS/JS都放置在同一个组件里面，这更加方便我们后期的维护。
 ---
 
 ## VUE的基本语法
-在上节我们讲到，vue默认挂载Hello组件。所以我们可以在Hello做相应的例子学习！
+在上节我们讲到，vue默认挂载Hello组件。所以我们可以在Hello.vue中做相应的例子学习！
 ### 绑定数据
+#### 代码：
+```javascript
+<template>
+  <div>
+    <h2>{{message}}</h2>
+  </div>
+</template>
+<script>
+export default {
+  data () {
+    return {
+      message: 'Hello Vue'
+    }
+  }
+}
+</script>
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+</style>
+```
+#### 讲解：
+* `<h2>{{message}}</h2>` 数据绑定最常见的形式就是使用 {{...}}（双大括号）。我们在h2中绑定了message变量参数
+* export default是ES6的语法，均可用于导出常量、函数、文件、模块等。因为我们Hello组件需要动态匹配到路由中，在app`<router-view></router-view>`中显示。所以需要export default进行导出。
+* data 作为一个函数通过return返回数据，我们可以在data中定义数据。这里我们定义了message值，再通过{{message}}绑定在组件中。
+
 
