@@ -30,3 +30,12 @@ $ npm install -g cnpm --registry=https://registry.npm.taobao.org
 
 ## Vue.js目录结构
 我们使用编辑器打开vue-app，可以看到我们的项目结构。
+> * build
+> * config
+> * node_modules
+> * src
+> * static
+> * .xxxx文件
+> * index.html
+> * package.json
+> * README.md
