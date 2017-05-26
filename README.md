@@ -416,3 +416,8 @@ export default {
 * 我们在filters中定义capitalize过滤函数。同时在组件中通过管道"|"添加过滤函数`{{ message | capitalize }}`
 * (value) => {}为ES6中的箭头函数，相当于function(value){}。
 
+> 事件处理
+#### 代码：
+```javascript
+```
+#### 讲解：
