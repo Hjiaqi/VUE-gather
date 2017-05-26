@@ -185,7 +185,7 @@ export default {
 </style>
 ```
 #### 讲解：
-
+* v-html 指令用于输出 html 代码，`v-html="message"`绑定的是html节点`<h1>VUE 从入门到项目实战</h1>`。
 
 
 
