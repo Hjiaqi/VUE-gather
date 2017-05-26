@@ -449,6 +449,7 @@ export default {
 * 通过v-on:click="reverseMessage"绑定点击事件。
 
 > 事件修饰符
+
 Vue.js 为 v-on 提供了事件修饰符来处理 DOM 事件细节，如：event.preventDefault() 或 event.stopPropagation()。
 Vue.js通过由点(.)表示的指令后缀来调用修饰符。
 ```javascrpt
