@@ -26,6 +26,6 @@ $ npm install -g cnpm --registry=https://registry.npm.taobao.org
 * 安装完依赖以后，我们在终端就可以运行我们的vue项目了，在终端输入npm run dev即可运行服务器
 * 在浏览器打开http://localhost:8080 可以看到我们运行的项目。
 
-===
+ ---
 
 ## Vue.js目录结构
