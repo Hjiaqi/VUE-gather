@@ -187,5 +187,27 @@ export default {
 #### 讲解：
 * v-html 指令用于输出 html 代码，`v-html="message"`绑定的是html节点`<h1>VUE 从入门到项目实战</h1>`。
 
-
-
+> 绑定属性（数据的双向绑定）
+#### 代码：
+```javascript
+<template>
+  <div>
+    <p v-bind:class="{'Textcolor': on}">VUE 从入门到项目实战</p>
+    <label>点击</label><input type="checkbox" v-model="on" value="点击">
+  </div>
+</template>
+<script>
+export default {
+  data () {
+    return {
+      on: false
+    }
+  }
+}
+</script>
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+.Textcolor{color: red;}
+</style>
+```
+#### 讲解：
