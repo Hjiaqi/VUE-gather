@@ -56,7 +56,7 @@ $ npm install -g cnpm --registry=https://registry.npm.taobao.org
   </body>
 </html>
 ```
-* 接着我们打开app.vue，将其改为,可以见到`<router-view></router-view>`，这便是我们vue路由的出口，它会将匹配到的组件将渲染在这里。
+* 接着我们打开app.vue，将其改为以下代码,可以见到`<router-view></router-view>`，这便是我们vue路由的出口，它会将匹配到的组件将渲染在这里。
 ```javascript
 <template>
   <div>
@@ -71,5 +71,22 @@ export default {
 <style>
 </style>
 ```
+* 再次我们打开router下面的index.js也就是我们的路由文件了。可以看到路由默认加载Hello组件。（详细内容我们会在路由章节讲解）
+```javascript
+import Vue from 'vue'
+import Router from 'vue-router'
+import Hello from '@/components/Hello'
 
+Vue.use(Router)
+
+export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'Hello',
+      component: Hello
+    }
+  ]
+})
+```
 
