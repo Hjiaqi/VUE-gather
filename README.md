@@ -136,7 +136,7 @@ export default {
 
 ## VUE的基本语法
 在上节我们讲到，vue默认挂载Hello组件。所以我们可以在Hello.vue中做相应的例子学习！
-### 绑定数据
+### 插值
 > 文本
 #### 代码：
 ```javascript
@@ -250,7 +250,7 @@ vue支持javascript表达式
 * {{ message.split('').reverse().join('') }} //使用函数
 * v-bind:id="'list-' + id"  //绑定id
 
-> 条件
+> 条件 (v-show与v-if)
 #### 代码：
 ```javascript
 <template>
@@ -318,4 +318,101 @@ export default {
 * 相比之下， v-show 就简单得多——不管初始条件是什么，元素总是会被渲染，并且只是简单地基于 CSS 进行切换。
 * 一般来说， v-if 有更高的切换开销，而 v-show 有更高的初始渲染开销。因此，如果需要非常频繁地切换，则使用 v-show 较好；如果在运行时条件不太可能改变，则使用 v-if 较好。
 
+> 循环（v-for）
+#### 代码：
+```javascript
+<template>
+  <div>
+    <ol>
+      <li v-for="todo in todos">
+        {{ todo.text }}
+      </li>
+    </ol>
+  </div>
+</template>
+<script>
+export default {
+  data () {
+    return {
+      todos: [
+        { text: '学习 JavaScript' },
+        { text: '学习 Vue' },
+        { text: '整个牛项目' }
+      ]
+    }
+  }
+}
+</script>
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+</style>
+```
+#### 讲解：
+* data中我们定义了todos数组对象
+* 通过`v-for="todo in todos"`遍历数组对象
+* 使用双大括号绑定遍历后的对象属性值`{{ todo.text }}`
+* 这样就能成功的将数据循环渲染组件中了
+
+> 数据的双向绑定
+
+#### 代码：
+```javascript
+<template>
+  <div>
+    <p>{{message}}</p>
+    <input v-model="message">
+  </div>
+</template>
+<script>
+export default {
+  data () {
+    return {
+      message: 'VUE 实战例子'
+    }
+  }
+}
+</script>
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+</style>
+```
+#### 讲解
+* data中我们初始化message
+* 将初始化值绑定到p标签中`{{message}}`
+* 再通过`v-model`绑定到input输入框中，这样就能实时监听和改变message的值。
+
+> 过滤器
+
+#### 代码：
+```javascript
+<template>
+  <div>
+    {{ message | capitalize }}
+  </div>
+</template>
+<script>
+export default {
+  data () {
+    return {
+      message: 'vue'
+    }
+  },
+  filters: {
+    capitalize: (value) => {
+      if (!value) return ''
+      value = value.toString()
+      return value.charAt(0).toUpperCase() + value.slice(1)
+    }
+  }
+}
+</script>
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+</style>
+```
+
+#### 讲解：
+* filters是VUE中的过滤器，我们可以在里面定义过滤函数。
+* 我们在filters中定义capitalize过滤函数。同时在组件中通过管道"|"添加过滤函数`{{ message | capitalize }}`
+* (value) => {}为ES6中的箭头函数，相当于function(value){}。
 
