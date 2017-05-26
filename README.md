@@ -30,12 +30,12 @@ $ npm install -g cnpm --registry=https://registry.npm.taobao.org
 
 ## Vue.js目录结构
 我们使用编辑器打开vue-app，可以看到我们的项目结构。
-> * build
-> * config
-> * node_modules
-> * src
-> * static
-> * .xxxx文件
-> * index.html
-> * package.json
-> * README.md
+> * build           （最终发布的代码存放位置）
+> * config          （配置目录，包括端口号等。我们初学可以使用默认的。）
+> * node_modules    （npm 加载的项目依赖模块）
+> * src             （这里是我们要开发的目录，基本上要做的事情都在这个目录里。）
+> * static          （静态资源目录，如图片、字体等。）
+> * .xxxx文件       （这些是一些配置文件，包括语法配置，git配置等。）
+> * index.html      （首页入口文件，你可以添加一些 meta 信息或同统计代码等。）
+> * package.json    （项目配置文件。）
+> * README.md       （项目的说明文档，markdown 格式）
