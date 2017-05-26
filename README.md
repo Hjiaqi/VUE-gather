@@ -532,8 +532,37 @@ VUE的基本语法我们就暂时讲那么多，需要了解更多基本语法�
 
 ### 注册
 #### 代码：
-```javascript
+注意：以下实例并非在Hello.vue中演示，如需测试请下载 vue.min.js 并用 <script> 标签引入HTML中进行测试。
 
+```javascript
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue 快速入门到项目实战(runoob.com)</title>
+<script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+	<huangjiaqi></huangjiaqi>
+</div>
+
+<script>
+// 注册
+Vue.component('huangjiaqi', {
+  template: '<h1>自定义组件!</h1>'
+})
+// 创建根实例
+new Vue({
+  el: '#app'
+})
+</script>
+</body>
+</html>
 ```
 #### 讲解：
+
+### 全局注册
+注意：以下实例并非在Hello.vue中演示，如需测试请下载 vue.min.js 并用 <script> 标签引入HTML中进行测试。
+
 
