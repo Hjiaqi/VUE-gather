@@ -250,7 +250,7 @@ vue支持javascript表达式
 * {{ message.split('').reverse().join('') }} //使用函数
 * v-bind:id="'list-' + id"  //绑定id
 
-> 条件 (v-show与v-if)
+### 条件 (v-show与v-if)
 #### 代码：
 ```javascript
 <template>
@@ -318,7 +318,7 @@ export default {
 * 相比之下， v-show 就简单得多——不管初始条件是什么，元素总是会被渲染，并且只是简单地基于 CSS 进行切换。
 * 一般来说， v-if 有更高的切换开销，而 v-show 有更高的初始渲染开销。因此，如果需要非常频繁地切换，则使用 v-show 较好；如果在运行时条件不太可能改变，则使用 v-if 较好。
 
-> 循环（v-for）
+### 循环（v-for）
 #### 代码：
 ```javascript
 <template>
@@ -353,7 +353,7 @@ export default {
 * 使用双大括号绑定遍历后的对象属性值`{{ todo.text }}`
 * 这样就能成功的将数据循环渲染组件中了
 
-> 数据的双向绑定
+### 数据的双向绑定
 
 #### 代码：
 ```javascript
@@ -381,7 +381,7 @@ export default {
 * 将初始化值绑定到p标签中`{{message}}`
 * 再通过`v-model`绑定到input输入框中，这样就能实时监听和改变message的值。
 
-> 过滤器
+### 过滤器
 
 #### 代码：
 ```javascript
@@ -416,7 +416,7 @@ export default {
 * 我们在filters中定义capitalize过滤函数。同时在组件中通过管道"|"添加过滤函数`{{ message | capitalize }}`
 * (value) => {}为ES6中的箭头函数，相当于function(value){}。
 
-> 事件处理
+### 事件处理
 #### 代码：
 ```javascript
 <template>
@@ -471,7 +471,7 @@ Vue.js通过由点(.)表示的指令后缀来调用修饰符。
 ```
 除此之外还有按键修饰符，详情请访问vue官网。
 
-> 缩写
+### 缩写
 #### v-bind 缩写
 ```javascript
 <!-- 完整语法 -->
@@ -487,7 +487,7 @@ Vue.js通过由点(.)表示的指令后缀来调用修饰符。
 <a @click="doSomething"></a>
 ```
 
-> 计算
+### 计算
 
 #### 代码：
 ```javascript
