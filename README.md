@@ -89,7 +89,7 @@ export default new Router({
   ]
 })
 ```
-* 最后我们打开Hello.vue,并将其改为以下代码。`<template></template>`里面的内容就是我们的组件内容，也是真正渲染到页面的内容。
+* 最后我们打开Hello.vue,并将其改为以下代码。`<template></template>`里面的内容就是我们的组件内容，也是真正渲染到页面的内容（详细内容我们会在组件章节讲解）。
 ```javascript
 <template>
   <div>
@@ -115,8 +115,23 @@ export default {
 ---
 
 ## VUE组件结构
-
-
+这里只讲述vue的基本结构，详细内容会在组件章节中作详解。
+组件（Component）是 Vue.js 最强大的功能之一。
+组件可以扩展 HTML 元素，封装可重用的代码。
+组件系统让我们可以用独立可复用的小组件来构建大型应用，几乎任意类型的应用的界面都可以抽象为一个组件树
+#### 代码：
+```javascript
+<template></template>
+<script type="text/ecmascript-6">
+</script>
+<style scoped>
+</style>
+```
+#### 讲解：
+* `<template></template>`是我们组件的内容，也是HTML放置区域。
+* `<script type="text/ecmascript-6"></script>`相信大家都不陌生，就是js区域。type="text/ecmascript-6"声明支持ES6语法。
+* `<style scoped></style>`是我们组件的样式区域。
+* vue中最大的设计特点就是HTML/CSS/JS都放置在同一个组件里面，这更加方便我们后期的维护。
 ---
 
 ## VUE的基本语法
