@@ -42,7 +42,7 @@ $ npm install -g cnpm --registry=https://registry.npm.taobao.org
 
 #### 修改vue文件
 接下来我们修改一些vue-cli自带的不必要代码，让我们整个项目的思路变得更加清晰！
-* 首先我们打开入口也index.html,可以看到我们index.html,只单单挂着一个``
+* 首先我们打开入口也index.html,可以看到我们index.html,只单单挂着一个`<div id="app"><div>`。
 ```javascript
 <!DOCTYPE html>
 <html>
@@ -55,6 +55,21 @@ $ npm install -g cnpm --registry=https://registry.npm.taobao.org
     <!-- built files will be auto injected -->
   </body>
 </html>
+```
+* 接着我们打开app.vue，将其改为,可以见到`<router-view></router-view>`，这便是我们vue路由的出口，它会将匹配到的组件将渲染在这里。
+```javascript
+<template>
+  <div>
+    <router-view></router-view>
+  </div>
+</template>
+<script>
+export default {
+  name: 'app'
+}
+</script>
+<style>
+</style>
 ```
 
 
