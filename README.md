@@ -39,3 +39,7 @@ $ npm install -g cnpm --registry=https://registry.npm.taobao.org
 > * index.html      （首页入口文件，你可以添加一些 meta 信息或同统计代码等。）
 > * package.json    （项目配置文件。）
 > * README.md       （项目的说明文档，markdown 格式）
+
+####修改一些自带不必要的vue文件，让我们整个项目思路变得更加清晰。
+
+
