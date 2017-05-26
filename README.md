@@ -486,3 +486,40 @@ Vue.js通过由点(.)表示的指令后缀来调用修饰符。
 <!-- 缩写 -->
 <a @click="doSomething"></a>
 ```
+
+> 计算
+
+#### 代码：
+```javascript
+<template>
+  <div>
+      <p>原始字符串: {{ message }}</p>
+      <p>计算后反转字符串: {{ reversedMessage }}</p>
+  </div>
+</template>
+<script>
+export default {
+  data () {
+    return {
+      message: 'VUE项目实战'
+    }
+  },
+   computed: {
+      // 计算属性的 getter
+      reversedMessage: function () {
+      // `this` 指向 vm 实例
+      return this.message.split('').reverse().join('')
+    }
+  }
+}
+</script>
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+</style>
+```
+#### 讲解：
+* computed是VUE中的计算，我们可以在computed中定义计算公式。
+* 有同学会说computed看起来好像没什么特殊的地方，computed能实现的methods方法也能实现啊。
+* 两者的区别：computed 是基于它的依赖缓存，只有相关依赖发生改变时才会重新取值。而使用 methods ，在重新渲染的时候，函数总会重新调用执行。 
+
+
