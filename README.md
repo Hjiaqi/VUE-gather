@@ -561,7 +561,7 @@ new Vue({
 </html>
 ```
 #### 讲解：
-
+* `Vue.component(tagName, options)` tagName 为组件名，options 为配置选项。
 ### 局部注册
 #### 代码：
 注意：以下实例并非在Hello.vue中演示，如需测试请下载 vue.min.js 并用 <script> 标签引入HTML中进行测试。
