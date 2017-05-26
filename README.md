@@ -251,3 +251,42 @@ vue支持javascript表达式
 * v-bind:id="'list-' + id"  //绑定id
 
 > 条件
+#### 代码：
+```javascript
+<template>
+  <div>
+    <p v-if="seen">VUE 从快速入门到项目实战</p>
+  </div>
+</template>
+<script>
+export default {
+  data () {
+    return {
+      seen: true
+    }
+  }
+}
+</script>
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+</style>
+```
+#### 讲解：
+* v-if="seen" seen参数可以是Boolean类型，也可以为表达式。当参数为true时则显示，反则隐藏。
+在2.1.0中还可以使用
+```javascript
+<div v-if="type === 'A'">
+  A
+</div>
+<div v-else-if="type === 'B'">
+  B
+</div>
+<div v-else-if="type === 'C'">
+  C
+</div>
+<div v-else>
+  Not A/B/C
+</div>
+```
+
+
