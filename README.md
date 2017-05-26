@@ -419,5 +419,69 @@ export default {
 > 事件处理
 #### 代码：
 ```javascript
+<template>
+  <div>
+      <p>{{ message }}</p>
+      <button v-on:click="reverseMessage">逆转消息</button>
+  </div>
+</template>
+<script>
+export default {
+  data () {
+    return {
+      message: 'VUE项目实战'
+    }
+  },
+   methods: {
+    reverseMessage: function () {
+      this.message = this.message.split('').reverse().join('')
+    }
+  }
+}
+</script>
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+</style>
 ```
 #### 讲解：
+* methods是VUE的事件，我们可以在methods里面定义事件处理函数。
+* 在methods中我们定义了reverseMessage逆转函数，来实现点击逆转字符串消息。
+* 通过v-on:click="reverseMessage"绑定点击事件。
+
+> 事件修饰符
+Vue.js 为 v-on 提供了事件修饰符来处理 DOM 事件细节，如：event.preventDefault() 或 event.stopPropagation()。
+Vue.js通过由点(.)表示的指令后缀来调用修饰符。
+```javascrpt
+<!-- 阻止单击事件冒泡 -->
+<a v-on:click.stop="doThis"></a>
+<!-- 提交事件不再重载页面 -->
+<form v-on:submit.prevent="onSubmit"></form>
+<!-- 修饰符可以串联  -->
+<a v-on:click.stop.prevent="doThat"></a>
+<!-- 只有修饰符 -->
+<form v-on:submit.prevent></form>
+<!-- 添加事件侦听器时使用事件捕获模式 -->
+<div v-on:click.capture="doThis">...</div>
+<!-- 只当事件在该元素本身（而不是子元素）触发时触发回调 -->
+<div v-on:click.self="doThat">...</div>
+
+<!-- click 事件至少触发一次，2.1.4版本新增 -->
+<a v-on:click.once="doThis"></a>
+```
+除此之外还有按键修饰符，详情请访问vue官网。
+
+> 缩写
+#### v-bind 缩写
+```javascript
+<!-- 完整语法 -->
+<a v-bind:href="url"></a>
+<!-- 缩写 -->
+<a :href="url"></a>
+```
+#### v-on 缩写
+```javascript
+<!-- 完整语法 -->
+<a v-on:click="doSomething"></a>
+<!-- 缩写 -->
+<a @click="doSomething"></a>
+```
