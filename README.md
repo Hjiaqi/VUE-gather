@@ -42,6 +42,19 @@ $ npm install -g cnpm --registry=https://registry.npm.taobao.org
 
 #### 修改vue文件
 接下来我们修改一些vue-cli自带的不必要代码，让我们整个项目的思路变得更加清晰！
-
+* 首先我们打开入口也index.html,可以看到我们index.html,只单单挂着一个``
+```javascript
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>vue-app</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
+```
 
 
