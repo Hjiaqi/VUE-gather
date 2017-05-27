@@ -607,8 +607,72 @@ new Vue({
 我们在实际开发中，并不会把组件和父级放在同一个vue/HTML中，这样不方便我们去复用组件。<br>
 我们知道除了index.html其他的内容均通过vue组件挂载到index.html中，这也是我们单页面应用的一大特点。<br>
 那么接下来的例子中我们将通过两个vue组件来讲解组件的常用注册方法以及组件的嵌套问题。<br>
-假如我们把Hello当做是默认的首页，接下来我们将定义foot组件作为我们的底部工具栏组件。<br>
+假如我们把Hello当做是默认的首页，接下来我们将定义foot组件作为我们的底部工具栏组件并挂载到我们的首页（Hello.vue）当中。<br>
 
 #### foot组件代码：
-
+```javascript
+<template>
+	<!--底部工具栏-->
+	<div class="footer">
+		<ul>
+			<li @click="goindex" class="index_sty">
+				<span>首页</span>
+			</li>
+			<li @click="goclassify" class="classify_sty">
+				<span>分类</span>
+			</li>
+			<li  @click="gocart" class="cart_sty">
+				<span>购物车</span>
+			</li>
+			<li  @click="gomy" class="my_sty">
+				<span>我的</span>
+			</li>
+		</ul>
+	</div>
+</template>
+<script type="text/ecmascript-6">
+	export default{
+		data() {
+			return {
+				
+			}
+		},
+		methods: {
+			goindex(){
+				this.$router.push('/');
+			},
+			goclassify(){
+				this.$router.push('/classify');
+			},
+			// 购物车页面跳转判断函数
+			gocart(){
+				if(localStorage.lastname==null){
+					this.$router.push('/login');
+      			}else{
+					this.$router.push('/cart');
+				}
+			},
+			// 我的页面跳转判断函数
+			gomy(){
+				if(localStorage.lastname==null){
+        			this.$router.push('/login');
+      			}else{
+					this.$router.push('/my');
+				}
+			}
+		}
+	}
+</script>
+<style>
+    /*为了方便演示我们将样式代码省略*/
+</style>
+```
 #### foot组件讲解：
+
+* 在子组件中我们的组件结构还是以`<template></template>,<script type="text/ecmascript-6"></script>,<style></style>`为基本结构
+* `<template></template>`同样还是定义我们的组件内容。
+* 在li中我们绑定了@click点击事件，因为我们底部工具栏跳转
+
+
+
+
