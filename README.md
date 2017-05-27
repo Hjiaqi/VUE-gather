@@ -671,7 +671,7 @@ new Vue({
 
 * 在子组件中我们的组件结构还是以`<template></template>,<script type="text/ecmascript-6"></script>,<style></style>`为基本结构
 * `<template></template>`同样还是定义我们的组件内容。
-* 在li中我们绑定了@click点击事件，因为我们在底部工具栏跳转中需要用到判断所以我们直接使用点击事件来进行跳转。（如果您不需要判断的话也可以直接使用<router-link to="/路径"></router-link>进行跳转）。本例中主要讲解组件使用，页面跳转属于路由章节的内容，我们在此不做详细解释。路由具体内容我们在路由章节会做详细讲解。感兴趣的同学也可以先访问路由文档（`https://router.vuejs.org/zh-cn/essentials/getting-started.html`）进行了解。
+* 在li中我们绑定了@click点击事件，因为我们在底部工具栏跳转中需要用到判断所以我们直接使用点击事件来进行跳转。（如果您不需要判断的话也可以直接使用`<router-link to="/路径"></router-link>`进行跳转）。本例中主要讲解组件使用，页面跳转属于路由章节的内容，我们在此不做详细解释。路由具体内容我们在路由章节会做详细讲解。感兴趣的同学也可以先访问路由文档（`https://router.vuejs.org/zh-cn/essentials/getting-started.html`）进行了解。
 * export default我们在之前的章节中讲到，这是ES6的语法，可用于导出常量、函数、文件、模块等。这里我们需要导出组件，并在父级组件中使用，所有我们用到export default来声明导出。
 *　methods方法中我们定义了相关的点击跳转判断事件。
 
