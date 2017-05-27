@@ -675,8 +675,35 @@ new Vue({
 * export default我们在之前的章节中讲到，这是ES6的语法，可用于导出常量、函数、文件、模块等。这里我们需要导出组件，并在父级组件中使用，所有我们用到export default来声明导出。
 *　methods方法中我们定义了相关的点击跳转判断事件。
 
+#### Hello组件代码：
+```javascript
+<template>
+  <!-- 引入底部工具栏组件 -->
+  <foot></foot>
+</template>
+<script type="text/ecmascript-6">
+import foot from './children/foot.vue'
+export default {
+  data () {
+    return {
+      
+    }
+  },
+  // 组件声明
+  components: {
+    'foot': foot
+  }
+}
+</script>
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+</style>
+```
 
-
-
-
+#### Hello组件讲解：
+其实使用组件的方法非常简单，只需要单单几步即可引用组件：
+* 首先我们导入foot组件 import foot from './children/foot.vue'
+* 在组件注册components中，声明注册foot组件。`'foot': foot`
+* 最后就可以直接在template中使用了。
+* 使用的方法：`<foot></foot>`
 
