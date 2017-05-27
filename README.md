@@ -608,6 +608,7 @@ new Vue({
 我们知道除了index.html其他的内容均通过vue组件挂载到index.html中，这也是我们单页面应用的一大特点。<br>
 那么接下来的例子中我们将通过两个vue组件来讲解组件的常用注册方法以及组件的嵌套问题。<br>
 假如我们把Hello当做是默认的首页，接下来我们将定义foot组件作为我们的底部工具栏组件并挂载到我们的首页（Hello.vue）当中。<br>
+我们在src的components目录下添加children文件夹作为我们子组件的文件存放位置，并在children文件夹下添加foot.vue组件。
 
 #### foot组件代码：
 ```javascript
