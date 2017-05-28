@@ -715,7 +715,68 @@ export default {
 父组件向子组件传值
 组件实例的作用域是孤立的。这意味着不能(也不应该)在子组件的模板内直接引用父组件的数据。要让子组件使用父组件的数据，我们需要通过子组件的props选项。
 
-#### 代码：
+#### 父级组件（Hello）代码：
 ```javascript
+<template>
+  <div class="hello">
+    <foot message="hello!"></foot>
+  </div>
+</template>
 
+<script>
+import foot from './children/foot.vue'  
+export default {  
+  name: 'hello',
+  data () {
+    return {
+    }
+  },
+  // 组件声明
+  components: {
+    'foot': foot
+  }
+}
+</script>
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+</style>
 ```
+#### 父级组件（Hello）讲解：
+* `<foot message="hello!"></foot>`我们在组件实例化（应用）中，通过message="hello!"传值到组件中。message名字可以随意起，当然建议起有意义的名称。hello则是我们实际传到子组件的值。
+
+#### 子级组件（foot）代码：
+
+```javascript
+<template>
+  <div>
+  	<p>{{message}}</p>
+  </div>
+</template>
+<script>
+export default {
+  props: ['message'],
+  data () {
+    return {
+
+    }
+  },
+  mounted: function(){
+  	this.test();
+  },
+  methods: {
+  	test: function(){
+  		console.log(this.message);
+  	}
+  }
+}
+</script>
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+</style>
+```
+
+#### 子级组件（foot）讲解：
+* 父组件向子组件传数据，子组件也应当要接受父级传过来的参数。
+* 通过props可以接收到父级的数据。
+* 例子中我们可以看到在template我们可以直接通过双大括号直接使用数据`{{message}}`，同时在JS中我们可以引用`this.message`同样在控制台也会输出相应的值。
+
