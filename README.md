@@ -15,7 +15,7 @@
 在终端上输入
 $ npm install -g cnpm --registry=https://registry.npm.taobao.org
 安装好淘宝镜像之后我们开始安装基于cli的vue.js脚架
-（使用webpack前端模块化管理工具能够让我们快速构建和管理vue项目，官网http://webpack.github.io/）
+（使用webpack前端自动化管理工具能够让我们快速构建和管理vue项目，官网http://webpack.github.io/）
 接下来我们准备在D盘使用全局安装创建vue项目脚架
 * 在终端打开D盘（D:）
 * 输入cnpm install --global vue-cli 全局安装vue-cli
